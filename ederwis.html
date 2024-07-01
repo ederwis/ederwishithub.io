@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curriculum de ederwis</title>
+    <style>
+
+
+
+        /* Estilos CSS para los botones */
+        .Informacion-button {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        
+    </style>    
+    <link rel="stylesheet" href="ederwis.css">
+</head>
+<body>
+    <div class="info-texto">
+        <h1>Ederwis Rodriguez</h1>
+        </div>
+    <div class="info">
+        <div class="info-foto">
+            <img src="Imagenes/perfil.jpg" alt="">
+        </div>
+        
+           <h1>Informacion Personal</h1>
+        <h2><ul> <li>Nombre completo: Ederwis Damián Rodriguez Freites </li>
+        <li>Cédula: 32.583.257</li>
+        <li>Edad: 17</li>
+        <li>Fecha de nacimiento: 24/05/2007</li>
+       </ul></h2>
+        <!-- Botones para la información -->
+        <div class="botones">
+            <button class="informacion-button" onclick="showInformacion('Formacion')">Formación</button>
+            <button class="informacion-button" onclick="showInformacion('Habilidades')">Habilidades</button>
+            <button class="informacion-button" onclick="showInformacion('Experiencialaboral')">Experiencia laboral</button>
+            <button class="informacion-button" onclick="showInformacion('Proyectos')">Proyectos</button>
+        </div>
+
+    <!-- Contenedor para mostrar la imagen y descripción -->
+        
+        <div class="form"id="Formacion" >
+            <p class="for1"> Formación</p>
+            <p class ="for" id="Formacion-description"><ul><li>Primaria: U.E.P.Corazón de María</li>
+            <li>Secundaria: U.E.P.Corazón de María</li></ul></p>
+            <img  id="Formacion-image" src="./Imagenes/Formacion.jpg" alt="Imagen de Formacion">
+        </div>
+        
+        <div class="habi" id="Habilidades" >
+            <p class=" habi1"> Habilidades</p>
+            <p class="hab" id="Habilidades-description"><ul><li>Facilidad para aceptar y trabajar con las criticas constructivas</li>
+            <li>Ser empático</li><li>Capacidad de organización y planificación</li><li>Se trabajar muy bien en equipo</li><li>Adaptabilidad y flexibilidad</li></ul></p>
+            <img id="Habilidades-image" src="./Imagenes/Habilidades.webp" alt="Imagen de Habilidades">
+        </div>
+      
+        <div class="exper" id="Experiencialaboral" >
+            <p class="exper1">Experiencia laboral</p>
+            <p class="expe" id="Experiencialaboral-description"><ul><li>Trabaje como asistente de cocina</li>
+                <li>Empresa: SushiJireh</li> <li>Contacto: +58 424-1789443</li></ul></p>
+            <img id="Experiencialaboral-image" src="./Imagenes/Experiencia.jpg" alt="Imagen de Experiencialaboral">
+        </div>
+        <div class="proy" id="Proyectos" >
+            <p class="proy1">Proyectos</p>
+            <p class="pro" id="Proyectos-description">Proyectos.</p>
+            <img id="Proyectos-img" src="./Imagenes/Proyectos.jpg" alt="Imagen de Proyectos">
+        </div>
+    </div>
+
+    <script>                
+        hideInformacion();
+    
+
+        // Funcion para ocultar la información de Ederwis
+        function hideInformacion() {
+            document.getElementById('Formacion').style.display = 'none';
+            document.getElementById('Habilidades').style.display = 'none';
+            document.getElementById('Experiencialaboral').style.display = 'none';
+            document.getElementById('Proyectos').style.display = 'none';
+        }
+
+        // Función para mostrar la información de Ederwis
+        function showInformacion(informacionName) {            
+            // Ocultar toda la información
+            hideInformacion();
+            // Mostrar la información seleccionada
+            document.getElementById(informacionName).style.display = 'block';
+        }
+         
+    
+   
+    </script>
+</body>
+</html>
